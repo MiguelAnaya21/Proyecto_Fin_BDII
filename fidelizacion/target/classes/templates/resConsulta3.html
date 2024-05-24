@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resultados Subconsulta 3</title>
+</head>
+<body>
+    <h1>Resultados de la Subconsulta 3</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Precio Venta</th>
+                <!-- Otros campos que desees mostrar -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="producto : ${resultados}">
+                <td th:text="${producto.PROD_ID}">ID</td>
+                <td th:text="${producto.PROD_NOMBRE}">Nombre</td>
+                <td th:text="${producto.PROD_PRECIO_VENTA}">Precio Venta</td>
+                <!-- Otros campos que desees mostrar -->
+            </tr>
+        </tbody>
+    </table>
+    <a href="/consultas">Volver a Consultas</a>
+</body>
+</html>
+
