@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/fidelizacion.css">
+
+    <title>Consultas</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img th:src="@{img/logo_fidelizacion.png}" width="30" height="30" alt="Logo">
+            Consultas
+        </a>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Consultas</h1>
+        <div class="mb-3 text-right">
+            <a href="/listado" class="btn btn-success">Regresar</a>
+        </div>
+        <!-- Formulario para Precio de Venta Mayor al Promedio -->
+        <form action="/subconsulta3" method="get" class="mb-4">
+            <div class="form-group">
+                <label for="precioVenta">Precio de Venta Mayor al Promedio:</label>
+                <input type="number" step="0.01" name="precioVenta" id="precioVenta" class="form-control" placeholder="0.00" required>
+            </div>
+            <button type="submit" class="btn btn-success">Consultar</button>
+        </form>
+
+        <!-- Formulario para Existencia Menor al Promedio -->
+        <form action="/subconsulta4" method="get" class="mb-4">
+            <div class="form-group">
+                <label for="existencia">Existencia Menor al Promedio:</label>
+                <input type="number" name="existencia" id="existencia" class="form-control" placeholder="0" required>
+            </div>
+            <button type="submit" class="btn btn-success">Consultar</button>
+        </form>
+
+        <!-- Formulario para Valoración Mayor a -->
+        <form action="/buscarValoracionPROV" method="get" class="mb-4">
+            <div class="form-group">
+                <label for="searchValoracion">Valoración Mayor a:</label>
+                <input type="number" step="0.1" name="searchValoracion" id="searchValoracion" class="form-control" placeholder="0.0" required>
+            </div>
+            <button type="submit" class="btn btn-success">Consultar</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="navbar navbar-dark bg-dark mt-5">
+        <p style="color: white; text-align: center; padding: 10px; margin: 0 auto;">© 2024 Fidelizacion. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
